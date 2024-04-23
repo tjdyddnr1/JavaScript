@@ -39,3 +39,33 @@ let age = 10;
 let isAdult = (age > 18) ? true : false;
 if(isAdult) console.log("성인 입니다.");
 else console.log("미성년자 입니다.");
+
+// undefined : 
+let empty;  // 자바스크립트는 값이 대입 될 떄 형이 결정나고 값이 대입 되지 않으면 undefined
+console.log(empty);
+
+// 객체 : 자바스크립트는 기본 자료형을 제외하고 모든 자료형이 객체임.
+let score = [80, 90, 100, 65];
+console.log(score[2]);
+let array2 = ["아이브", "안유진", 20, true, [100, 99, 88]];
+console.log(array2[1][1]);
+console.log(array2[4][2]);
+
+// 객체 리터럴 (자바의 Map과 조금 유사)
+let score2 = {
+  kor: 80,
+  eng: 90,
+  mat: 56,
+  scn: 99,
+};
+console.log(score2.mat);
+
+
+// typeof : 데이터 형을 확인하기 위해 사용
+let name = "장원영";
+console.log(typeof(name));
+
+// toString() : 문자열 변환하는 메소드
+let fluits = ["바나나", "오렌지", "사과", "망고"];
+console.log(fluits.toString());
+
