@@ -16,3 +16,4 @@ const myCounter = Counter();
 myCounter.increment();
 myCounter.increment();
 myCounter.increment();
+myCounter.dencrement();
