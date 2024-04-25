@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>text-1</p>
+  <p>text-2</p>
+  <p>text-3</p>
+  <span>abc-1</span>
+  <span>abc-2</span>
+  <span>abc-3</span>
+  <script>
+    let pEls = document.querySelectorAll("p");
+    let sEls = document.querySelectorAll("span");
+    let d = pEls + sEls;
+    console.log(d);
+    d.foreach(el => {
+      el.addEventListener("click", function() {
+        if(this.style.color === 'red') {
+          this.style.color = "black";
+        } else {
+          this.style.color = "red";
+        }
+      });
+    })
+  </script>
+</body>
+</html>
