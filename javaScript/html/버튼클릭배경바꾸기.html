@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .boat {
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .box {
+      position: relative;
+      top: 10px;
+      left: 15%;
+      width: 600px;
+      height: 500px;
+      background-color: chartreuse;
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 20px;
+      width: 200px;
+      height: 50px;
+      border: 0px;
+    }
+  </style>
+</head>
+<body>
+  <div class="boat">
+  <div class="container">
+    <button style="background-color: green;">Green</button>
+    <button style="background-color: orange;">Orange</button>
+    <button style="background-color: purple;">Purple</button>
+  </div>
+  <div class="box"></div>
+</div>
+
+<script>
+      const btnEl = document.querySelectorAll("button");
+      const box = document.querySelector(".box")
+      for(let i = 0; i < btnEl.length; i++){
+        btnEl[i].addEventListener("click", function() {
+         box.style.backgroundColor = btnEl[i].style.backgroundColor
+      });
+    };
+</script>
+</body>
+</html>

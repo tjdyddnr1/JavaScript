@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .itzy {
+      width: 500px;
+      height: 400px;
+      background-image: url(/html/잇지.jpeg);
+      background-size: cover;
+      position: relative;
+    }
+    .view {
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background-color: rgb(202, 195, 195, 0.8);
+      color: rgb(240, 232, 232,);
+    }
+    .details {
+      width: 500px;
+      display: none;
+    }
+    .close {
+      display: block;
+      position: absolute;
+      background-color: rgb(202, 195, 195, 0.8);
+      color: rgb(240, 232, 232,);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class = "itzy">
+    <button class="view">상세 설명 보기</button>
+  </div>
+  <div class="details">
+    <h3>그룹 잇지</h3>
+    <br>
+    <p>팀명 'ITZY'는 '너희가 원하는 거 전부 있지? 있지!' 라는 뜻을 가지고 있으며,
+      정식 한글 표기법을 있지이다. 혹 영어명인 'ITZY'로만 들어본 사람들이 한글로는
+      어떻게 적는지 몰라 '잇지'라고 부르는 경우도 꽤 많이 있는데, '있지'라고 불러야
+      한다며 정정해주는 것이 팬덤 잇지에게는 일상이 되었다.
+    </p>
+    <button class="close">상세 설명 닫기</button>
+  </div>
+</div>
+<script>
+  const btn = document.querySelector(".view")
+  const details = document.querySelector(".details")
+  btn.addEventListener("click", function(){
+    btn.style.display = "none";
+    details.style.display = "block";
+  });
+  details.addEventListener("click", function() {
+    details.style.display = "none";
+    btn.style.display = "block";
+  });
+
+
+</script>
+</body>
+</html>
